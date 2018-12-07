@@ -1,11 +1,3 @@
-### CHANGE-SET ####
-
-1- C++ class CBlowFish given in AMOS C++ code is wrapped to call as PHP Extension
-2- Placed the compiled extension php_cblowfish.dll in php\ext folder;
-3- In php.ini extension is registered by adding line "extension=php_cblowfish"
-4- Restart apache service in Windows services.
-5- In application\libraries\Dbs.php changes are made to accomodate enrypted passwords. 
-6- In application\config\constants.php define('UP2_PSWD_ENCRYPTED' , 0x02000000); is added to identify encrypted vs non encrypted passwords.
 
 ### Compiling the module ###
 
@@ -24,11 +16,3 @@
 13- run nmake to build the source.
 14- run nmake install to install php and module php_cblowfish.dll in c:\php\ext
 
-### Deliverables ###
-1- Source code of module cblowfish in blowfish folder.
-2- Modified php.ini to be placed in C:\Program Files (x86)\AMOS Mail Web\php\.
-3- Modified Dbs.php to be placed in C:\Program Files (x86)\AMOS Mail Web\amweb\application\libraries\
-4- Build module php_cblowfish.dll to be placed in C:\Program Files (x86)\AMOS Mail Web\php\ext\
-5- Modifed C:\Program Files (x86)\AMOS Mail Web\amweb\application\config\constants.php is also provided.
-
-Note:- Existing blowfish implementation in helpers\blowfish_helper.php file is still in use to authenticate database users.
